@@ -9,5 +9,6 @@ chown -R barto:barto /opt/
 chown -R barto:barto /opt/PKGBUILD
 chown -R barto:barto /opt/yay-git
 	#installa pacchetti
+pacman -Syu
 pacman -S  notepadqq  --noconfirm
 

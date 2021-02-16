@@ -29,15 +29,6 @@ systemctl enable gdm NetworkManager sshd
 	#aggiunta utenti
 useradd -m -G wheel -s /bin/bash barto
 echo "AllowUsers barto root" >>  /etc/ssh/sshd_config 
-	#carica share samba
-mkdir /serverBarto
-mkdir /shared
-mkdir /Downloaded
-mkdir /BackupBarto
-echo "//10.100.10.31/serverbarto /serverBarto cifs noauto,rw,users,username=arch,password=A24432gb! 0 0" >> /etc/fstab
-echo "//10.100.10.31/shared /shared cifs noauto,rw,users,username=arch,password=A24432gb! 0 0" >> /etc/fstab
-echo "//10.100.10.31/downloaded /Downloaded cifs noauto,rw,users,username=arch,password=A24432gb! 0 0" >> /etc/fstab
-echo "//10.100.10.31/BackupBarto /BackupBarto cifs noauto,rw,users,username=arch,password=A24432gb! 0 0" >> /etc/fstab
 	#chiusura
 echo "root:rootPSW!" | chpasswd
 echo "barto:5496" | chpasswd
